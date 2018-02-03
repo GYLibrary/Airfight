@@ -1,8 +1,11 @@
 import Vapor
 
+let version = "api/V1"
+
+
 extension Droplet {
     func setupRoutes() throws {
-        get("hello") { req in
+        get(version+"hello") { req in
             var json = JSON()
             try json.set("hello", "world")
             return json
