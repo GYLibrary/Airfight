@@ -15,15 +15,7 @@ extension Droplet {
             return "Hello, world!"
         }
         
-        post(version+"plaintext"){ req in
-            var json = JSON()
-            try json.set("hello", "wrold")
-            try json.set("GY", "Handsome")
-            return json
-        }
-        
-        
-
+           
         // response to requests to /info domain
         // with a description of the request
         get(version+"info") { req in
@@ -33,5 +25,19 @@ extension Droplet {
         get(version+"description") { req in return req.description }
         
         try resource("posts", PostController.self)
+    }
+
+}
+
+extension Droplet {
+    func postsRoutes() throws {
+        
+        post(version+"gy"){ req in
+            var json = JSON()
+            try json.set("hello", "wrold")
+            try json.set("GY", "Handsome")
+            return json
+        }
+        
     }
 }
