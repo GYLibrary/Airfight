@@ -1,6 +1,6 @@
 import Vapor
 
-let version = "api/V1"
+let version = "api/V1/"
 
 
 extension Droplet {
@@ -11,17 +11,26 @@ extension Droplet {
             return json
         }
 
-        get("plaintext") { req in
+        get(version+"plaintext") { req in
             return "Hello, world!"
         }
+        
+        post(version+"plaintext"){ req in
+            var json = JSON()
+            try json.set("hello", "wrold")
+            try json.set("GY", "Handsome")
+            return json
+        }
+        
+        
 
         // response to requests to /info domain
         // with a description of the request
-        get("info") { req in
+        get(version+"info") { req in
             return req.description
         }
 
-        get("description") { req in return req.description }
+        get(version+"description") { req in return req.description }
         
         try resource("posts", PostController.self)
     }
