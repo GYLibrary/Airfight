@@ -47,12 +47,7 @@ extension Droplet {
             try json.set("GY", "Handsome")
             return json
         }
-        
-        post(version+"downloadBin") {
-            
-//            var data = Bundle.re
-            
-        }
+
         
     }
 }
