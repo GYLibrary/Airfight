@@ -10,6 +10,15 @@ extension Droplet {
             try json.set("hello", "world")
             return json
         }
+        
+        get(version+"currentVersionInfo") { req in
+            var json = JSON()
+            try json.set("state", "1")
+            try json.set("result", ["version": "3.1.6",
+                                   "updateDesc":"1.你最帅\n2.你最美",
+                                   "updateType": "optional"])
+            return json
+        }
 
         get(version+"plaintext") { req in
             return "Hello, world!"
