@@ -14,7 +14,7 @@ extension Droplet {
         get(version+"currentVersionInfo") { req in
             var json = JSON()
             try json.set("state", "1")
-            try json.set("result", ["version": "3.1.6",
+            try json.set("result", ["version": "4.1.6",
                                    "updateDesc":"1.你最帅\n2.你最美",
                                    "updateType": "optional"])
             return json
@@ -46,6 +46,12 @@ extension Droplet {
             try json.set("hello", "wrold")
             try json.set("GY", "Handsome")
             return json
+        }
+        
+        post(version+"downloadBin") {
+            
+//            var data = Bundle.re
+            
         }
         
     }
