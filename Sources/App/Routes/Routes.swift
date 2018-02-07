@@ -14,7 +14,7 @@ extension Droplet {
         get(version+"currentVersionInfo") { req in
             var json = JSON()
             try json.set("state", "1")
-            try json.set("result", ["version": "4.1.6",
+            try json.set("result", ["version": "3.3.9",
                                    "updateDesc":"1.你最帅\n2.你最美",
                                    "updateType": "optional"])
             return json
