@@ -47,7 +47,6 @@ extension Droplet {
             try json.set("GY", "Handsome")
             return json
         }
-
         
     }
 }

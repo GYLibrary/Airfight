@@ -3718,7 +3718,6 @@
 		OBJ_267 /* Log+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Log+Convenience.swift"; sourceTree = "<group>"; };
 		OBJ_268 /* LogLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogLevel.swift; sourceTree = "<group>"; };
 		OBJ_269 /* LogProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogProtocol.swift; sourceTree = "<group>"; };
-		OBJ_27 /* PerfectTemplate */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PerfectTemplate; sourceTree = SOURCE_ROOT; };
 		OBJ_271 /* Config+Mail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Config+Mail.swift"; sourceTree = "<group>"; };
 		OBJ_272 /* Mail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mail.swift; sourceTree = "<group>"; };
 		OBJ_273 /* Mailgun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mailgun.swift; sourceTree = "<group>"; };
@@ -5979,7 +5978,6 @@
 				OBJ_20 /* Tests */,
 				OBJ_25 /* Config */,
 				OBJ_26 /* Public */,
-				OBJ_27 /* PerfectTemplate */,
 				OBJ_28 /* Dependencies */,
 				OBJ_757 /* Products */,
 			);
