@@ -1,5 +1,5 @@
 import Vapor
-
+import Foundation
 let version = "api/V1/"
 
 
@@ -46,7 +46,9 @@ extension Droplet {
         
         
         post(version+"download") { req in
-            return try Response.init(filePath: "/Users/macpro-hz/Desktop/workSpace/Airfight/Sources/App/Routes/Rocomml2.BIN")
+            let path = Bundle.main.path(forResource: "Rocomml2", ofType: "BIN")
+            
+            return try Response.init(filePath: path!)
         }
         
     }
