@@ -19,10 +19,6 @@ extension Droplet {
                                    "updateType": "optional"])
             return json
         }
-
-        get(version+"plaintext") { req in
-            return "Hello, world!"
-        }
         
            
         // response to requests to /info domain
@@ -48,12 +44,10 @@ extension Droplet {
             return json
         }
         
-//        post(version+"download") { req in
-//         
-//        
-//            
-//            return
-//        }
+        
+        post(version+"download") { req in
+            return try Response.init(filePath: "/Users/macpro-hz/Desktop/workSpace/Airfight/Sources/App/Routes/Rocomml2.BIN")
+        }
         
     }
 }
