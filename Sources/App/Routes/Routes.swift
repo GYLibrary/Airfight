@@ -14,11 +14,22 @@ extension Droplet {
         get(version+"currentVersionInfo") { req in
             var json = JSON()
             try json.set("state", "1")
-            try json.set("result", ["version": "3.3.9",
+            try json.set("result", ["version": "3.0.0",
                                    "updateDesc":"1.你最帅\n2.你最美",
                                    "updateType": "optional"])
             return json
         }
+        get(version+"image") { req in
+            let path = Bundle.main.path(forResource: "11846829", ofType: "jpeg")
+            
+            return try Response.init(filePath: path!)
+        }
+        
+        get(version + "httml") { req in
+          return  Response(redirect: "http://www.jianshu.com/u/d20fcc519630")
+            
+        }
+
         
            
         // response to requests to /info domain
@@ -50,6 +61,7 @@ extension Droplet {
             
             return try Response.init(filePath: path!)
         }
+        
         
     }
 }
