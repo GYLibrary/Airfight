@@ -3552,7 +3552,7 @@
 
 /* Begin PBXFileReference section */
 		68667B36202AC880005C8B4D /* Rocomml2.BIN */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = Rocomml2.BIN; sourceTree = "<group>"; };
-		68667B38202ADEFC005C8B4D /* 11846829.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11846829.jpeg; sourceTree = "<group>"; };
+		68698050202D4B6C0097CB04 /* 11846829.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11846829.jpeg; sourceTree = "<group>"; };
 		"BCrypt::BCrypt::Product" /* BCrypt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BCrypt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Bits::Bits::Product" /* Bits.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Bits.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Console::Console::Product" /* Console.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Console.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -4858,8 +4858,8 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_14 /* Routes.swift */,
+				68698050202D4B6C0097CB04 /* 11846829.jpeg */,
 				68667B36202AC880005C8B4D /* Rocomml2.BIN */,
-				68667B38202ADEFC005C8B4D /* 11846829.jpeg */,
 			);
 			path = Routes;
 			sourceTree = "<group>";

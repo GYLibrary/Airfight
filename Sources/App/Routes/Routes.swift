@@ -1,4 +1,5 @@
 import Vapor
+import Python
 import Foundation
 let version = "api/V1/"
 
@@ -20,9 +21,21 @@ extension Droplet {
             return json
         }
         get(version+"image") { req in
-            let path = Bundle.main.path(forResource: "11846829", ofType: "jpeg")
+//            let path = Bundle.init(for: PostController.self).resourcePath! + "/11846829.jpeg"
+//            print(path!)
+            let thisImage = "/Users/macpro-hz/Desktop/workSpace/Airfight/Public/11846829.jpeg"
             
-            return try Response.init(filePath: path!)
+//            guard let path = Bundle.main.resourcePath else {
+//                preconditionFailure("No config file found")
+//            }
+//            let config = try Config(arguments: ["--workDir=\(path)"])
+            
+//            let drop = try Droplet(config: config)
+//            let str = Bundle.path(forResource: "11846829", ofType: "jpeg", inDirectory: "Public")
+        
+            let writeableDir = #file.components(separatedBy: "/").dropLast().joined(separator: "/")
+//            print(writeableDir)
+            return try Response(filePath: writeableDir+"/11846829.jpeg")
         }
         
         get(version + "httml") { req in
