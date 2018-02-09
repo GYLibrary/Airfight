@@ -6,8 +6,19 @@ let version = "api/V1/"
 
 extension Droplet {
     func setupRoutes() throws {
+        
+        
         get(version+"hello") { req in
+//            print( req.query?.context)
+
             var json = JSON()
+            
+            guard let _ = req.data["zgy"]?.string else {
+                try json.set("errorCode", "-666")
+                try json.set("erroInfo", "json serial")
+                try json.set("data",1)
+                return json
+            }
             try json.set("hello", "world")
             return json
         }
@@ -23,8 +34,6 @@ extension Droplet {
         get(version+"image") { req in
 //            let path = Bundle.init(for: PostController.self).resourcePath! + "/11846829.jpeg"
 //            print(path!)
-            let thisImage = "/Users/macpro-hz/Desktop/workSpace/Airfight/Public/11846829.jpeg"
-            
 //            guard let path = Bundle.main.resourcePath else {
 //                preconditionFailure("No config file found")
 //            }
@@ -70,9 +79,11 @@ extension Droplet {
         
         
         post(version+"download") { req in
-            let path = Bundle.main.path(forResource: "Rocomml2", ofType: "BIN")
+            let writeableDir = #file.components(separatedBy: "/").dropLast().joined(separator: "/") + "/Rocomml2.BIN"
             
-            return try Response.init(filePath: path!)
+            let file = NSData(contentsOfFile: writeableDir)! as Data
+
+            return file
         }
         
         
